@@ -1,0 +1,555 @@
+openapi: 3.0.0
+info:
+  title: Tester-XML-OneOf
+  description: ''
+  contact: {}
+  version: '0.0.0'
+servers:
+- url: https://example.com/api
+  variables: {}
+- url: http://localhost:3000/body-xml
+  description: http://localhost:3000/body-xml
+  variables: {}
+paths:
+  /oneof/cat:
+    get:
+      tags:
+      - Simple Xml Model
+      summary: Generate
+      description: ' This endpoint returns a cat model in xml'
+      operationId: Generate
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Cat'
+      deprecated: false
+    post:
+      tags:
+      - Simple Xml Model
+      summary: Validate
+      description: This endpoint expects a 'Cat' model as xml.
+      operationId: Validate
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Cat'
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema:
+                type: object
+      deprecated: false
+  /oneof/dog:
+    get:
+      tags:
+      - Simple Xml Model
+      summary: Generate1
+      description: This endpoint returns a 'Dog' model as xml.
+      operationId: Generate1
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Dog'
+      deprecated: false
+    post:
+      tags:
+      - Simple Xml Model
+      summary: Validate1
+      description: This endpoint expects a 'Dog' model as xml.
+      operationId: Validate1
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Dog'
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema:
+                type: object
+      deprecated: false
+  /oneof/catordog/cat:
+    get:
+      tags:
+      - Oneof Xml Model
+      summary: Generate
+      description: This endpoint returns a 'CatOrDog' model as xml.
+      operationId: GetGenerate
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/CatOrDog'
+      deprecated: false
+    post:
+      tags:
+      - Oneof Xml Model
+      summary: Validate
+      description: This endpoint expects a 'CatOrDog' model as xml.
+      operationId: PostValidate
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/CatOrDog'
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema:
+                type: object
+      deprecated: false
+  /oneof/catordog/dog:
+    get:
+      tags:
+      - Oneof Xml Model
+      summary: Generate1
+      description: This endpoint returns a 'CatOrDog' model as xml.
+      operationId: GetGenerate1
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/CatOrDog'
+      deprecated: false
+    post:
+      tags:
+      - Oneof Xml Model
+      summary: Validate1
+      description: This endpoint expects a 'CatOrDog' model as xml.
+      operationId: PostValidate1
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/CatOrDog'
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema:
+                type: object
+      deprecated: false
+  /oneof/catsordogs/arrayofcats:
+    get:
+      tags:
+      - Oneof Array Xml Model
+      summary: Generate
+      description: This endpoint returns a 'CatsOrDogs' model as xml.
+      operationId: GetGenerate2
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/CatsOrDogs'
+      deprecated: false
+    post:
+      tags:
+      - Oneof Array Xml Model
+      summary: Validate
+      description: This endpoint expects a 'CatsOrDogs' model as xml.
+      operationId: PostValidate2
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/CatsOrDogs'
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema:
+                type: object
+      deprecated: false
+  /oneof/catsordogs/arrayofdogs:
+    get:
+      tags:
+      - Oneof Array Xml Model
+      summary: Generate1
+      description: This endpoint returns a 'CatsOrDogs' model as xml.
+      operationId: GetGenerate11
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/CatsOrDogs'
+      deprecated: false
+  /oneof/catordog/arrayofdogs:
+    post:
+      tags:
+      - Oneof Array Xml Model
+      summary: Validate1
+      description: This endpoint expects a 'CatsOrDogs' model as xml.
+      operationId: PostValidate11
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/CatsOrDogs'
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema:
+                type: object
+      deprecated: false
+  /oneof/catsoradogorwolves/arraycats:
+    get:
+      tags:
+      - Oneof Array or Single Xml Model with optional wrapping element
+      summary: Generate
+      description: This endpoint returns a 'CatsOrADogOrWolves' model as xml.
+      operationId: GetGenerate3
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/CatsOrADogOrWolves'
+      deprecated: false
+    post:
+      tags:
+      - Oneof Array or Single Xml Model with optional wrapping element
+      summary: Validate
+      description: This endpoint expects a 'CatsOrADogOrWolves' model as xml.
+      operationId: PostValidate3
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/CatsOrADogOrWolves'
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema:
+                type: object
+      deprecated: false
+  /oneof/catsoradogorwolves/dog:
+    get:
+      tags:
+      - Oneof Array or Single Xml Model with optional wrapping element
+      summary: Generate1
+      description: This endpoint returns a 'CatsOrADogOrWolves' model as xml.
+      operationId: GetGenerate12
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/CatsOrADogOrWolves'
+      deprecated: false
+  /oneof/catoradogorwolves/dog:
+    post:
+      tags:
+      - Oneof Array or Single Xml Model with optional wrapping element
+      summary: Validate1
+      description: This endpoint expects a 'CatsOrADogOrWolves' model as xml.
+      operationId: PostValidate12
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/CatsOrADogOrWolves'
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema:
+                type: object
+      deprecated: false
+  /oneof/catsoradogorwolves/wolfwrapped:
+    get:
+      tags:
+      - Oneof Array or Single Xml Model with optional wrapping element
+      summary: Generate2
+      description: This endpoint returns a 'CatsOrADogOrWolves' model as xml.
+      operationId: Generate2
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/CatsOrADogOrWolves'
+      deprecated: false
+    post:
+      tags:
+      - Oneof Array or Single Xml Model with optional wrapping element
+      summary: Validate2
+      description: This endpoint expects a 'CatsOrADogOrWolves' model as xml.
+      operationId: Validate2
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/CatsOrADogOrWolves'
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema:
+                type: object
+      deprecated: false
+  /oneof/arrayofcatordogobjects/catsanddogs:
+    get:
+      tags:
+      - Array of Model with Oneof Models inside
+      summary: Generate
+      description: This endpoint returns a 'ArrayOfCatOrDogObjects' model as xml.
+      operationId: GetGenerate4
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ArrayOfCatOrDogObjects'
+      deprecated: false
+    post:
+      tags:
+      - Array of Model with Oneof Models inside
+      summary: Validate
+      description: This endpoint expects a 'ArrayOfCatOrDogObjects' model as xml.
+      operationId: PostValidate4
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/ArrayOfCatOrDogObjects'
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema:
+                type: object
+      deprecated: false
+  /oneof/arrayofcatordogobjects/dog:
+    get:
+      tags:
+      - Array of Model with Oneof Models inside
+      summary: Generate1
+      description: This endpoint returns a 'ArrayOfCatOrDogObjects' model as xml.
+      operationId: GetGenerate13
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ArrayOfCatOrDogObjects'
+      deprecated: false
+    post:
+      tags:
+      - Array of Model with Oneof Models inside
+      summary: Validate1
+      description: This endpoint expects a 'ArrayOfCatOrDogObjects' model as xml.
+      operationId: PostValidate13
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/ArrayOfCatOrDogObjects'
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema:
+                type: object
+      deprecated: false
+components:
+  schemas:
+    Cat:
+      title: Cat
+      required:
+      - Meows
+      type: object
+      properties:
+        Meows:
+          type: boolean
+      description: ''
+    Dog:
+      title: Dog
+      required:
+      - Barks
+      type: object
+      properties:
+        Barks:
+          type: boolean
+      description: ''
+    Wolf:
+      title: Wolf
+      required:
+      - Howls
+      type: object
+      properties:
+        Howls:
+          type: boolean
+      description: ''
+    CatOrDog:
+      title: CatOrDog
+      required:
+      - value
+      type: object
+      properties:
+        value:
+          oneOf:
+          - $ref: '#/components/schemas/Cat'
+          - $ref: '#/components/schemas/Dog'
+      description: Case 1
+    CatsOrDogs:
+      title: CatsOrDogs
+      required:
+      - value
+      type: object
+      properties:
+        value:
+          oneOf:
+          - type: array
+            items:
+              $ref: '#/components/schemas/Cat'
+          - type: array
+            items:
+              $ref: '#/components/schemas/Dog'
+      description: Case 2
+    CatsOrADogOrWolves:
+      title: CatsOrADogOrWolves
+      required:
+      - value
+      type: object
+      properties:
+        value:
+          oneOf:
+          - type: array
+            items:
+              $ref: '#/components/schemas/Cat'
+          - $ref: '#/components/schemas/Dog'
+          - type: array
+            items:
+              $ref: '#/components/schemas/Wolf'
+            xml:
+              name: wrapper
+              attribute: false
+              wrapped: true
+      description: Case 3
+    ArrayOfCatOrDogObjects:
+      title: ArrayOfCatOrDogObjects
+      required:
+      - value
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            oneOf:
+            - $ref: '#/components/schemas/Cat'
+            - $ref: '#/components/schemas/Dog'
+          description: ''
+      description: Case 4
+tags:
+- name: Simple Xml Model
+  description: ''
+- name: Oneof Xml Model
+  description: ''
+- name: Oneof Array Xml Model
+  description: ''
+- name: Oneof Array or Single Xml Model with optional wrapping element
+  description: ''
+- name: Array of Model with Oneof Models inside
+  description: ''
