@@ -19,11 +19,11 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/oneof-v1"
+	oneofv1 "github.com/speakeasy-sdks/oneof-v1"
 )
 
 func main() {
-    s := oneof.New()
+    s := oneofv1.New()
 
     ctx := context.Background()
     res, err := s.OneofXMLModel.GetGenerate(ctx)
@@ -61,11 +61,11 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/oneof-v1"
+	oneofv1 "github.com/speakeasy-sdks/oneof-v1"
 )
 
 func main() {
-    s := oneof.New()
+    s := oneofv1.New()
 
     ctx := context.Background()
     res, err := s.OneofXMLModel.GetGenerate1(ctx)
@@ -103,12 +103,12 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/oneof-v1"
+	oneofv1 "github.com/speakeasy-sdks/oneof-v1"
 	"github.com/speakeasy-sdks/oneof-v1/pkg/models/shared"
 )
 
 func main() {
-    s := oneof.New()
+    s := oneofv1.New()
 
     ctx := context.Background()
     res, err := s.OneofXMLModel.PostValidate(ctx, []byte("illum"))
@@ -147,12 +147,12 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/oneof-v1"
+	oneofv1 "github.com/speakeasy-sdks/oneof-v1"
 	"github.com/speakeasy-sdks/oneof-v1/pkg/models/shared"
 )
 
 func main() {
-    s := oneof.New()
+    s := oneofv1.New()
 
     ctx := context.Background()
     res, err := s.OneofXMLModel.PostValidate1(ctx, []byte("vel"))

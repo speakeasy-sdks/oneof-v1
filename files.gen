@@ -10,9 +10,12 @@ pkg/models/sdkerrors/sdkerror.go
 pkg/types/bigint.go
 pkg/types/date.go
 pkg/types/datetime.go
+pkg/types/decimal.go
+pkg/types/pointers.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
+pkg/utils/json.go
 pkg/utils/pathparams.go
 pkg/utils/queryparams.go
 pkg/utils/requestbody.go
@@ -48,12 +51,6 @@ pkg/models/shared/catsordogs.go
 pkg/models/shared/catsoradogorwolves.go
 pkg/models/shared/wolf.go
 pkg/models/shared/catordog.go
-docs/sdks/oneof/README.md
-docs/sdks/arrayofmodelwithoneofmodelsinside/README.md
-docs/sdks/oneofarrayxmlmodel/README.md
-docs/sdks/oneofarrayorsinglexmlmodelwithoptionalwrappingelement/README.md
-docs/sdks/oneofxmlmodel/README.md
-docs/sdks/simplexmlmodel/README.md
 USAGE.md
 docs/models/operations/getgenerate13response.md
 docs/models/operations/getgenerate4response.md
@@ -88,4 +85,10 @@ docs/models/shared/catsoradogorwolves.md
 docs/models/shared/wolf.md
 docs/models/shared/catordogvalue.md
 docs/models/shared/catordog.md
+docs/sdks/oneof/README.md
+docs/sdks/arrayofmodelwithoneofmodelsinside/README.md
+docs/sdks/oneofarrayxmlmodel/README.md
+docs/sdks/oneofarrayorsinglexmlmodelwithoptionalwrappingelement/README.md
+docs/sdks/oneofxmlmodel/README.md
+docs/sdks/simplexmlmodel/README.md
 .gitattributes

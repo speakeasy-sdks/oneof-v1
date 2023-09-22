@@ -3,9 +3,8 @@
 package shared
 
 import (
-	"bytes"
-	"encoding/json"
 	"errors"
+	"github.com/speakeasy-sdks/oneof-v1/pkg/utils"
 )
 
 type CatsOrADogOrWolvesValueType string
@@ -52,30 +51,23 @@ func CreateCatsOrADogOrWolvesValueArrayOfWolf(arrayOfWolf []Wolf) CatsOrADogOrWo
 }
 
 func (u *CatsOrADogOrWolvesValue) UnmarshalJSON(data []byte) error {
-	var d *json.Decoder
-
-	arrayOfCat := []Cat{}
-	d = json.NewDecoder(bytes.NewReader(data))
-	d.DisallowUnknownFields()
-	if err := d.Decode(&arrayOfCat); err == nil {
-		u.ArrayOfCat = arrayOfCat
-		u.Type = CatsOrADogOrWolvesValueTypeArrayOfCat
-		return nil
-	}
 
 	dog := new(Dog)
-	d = json.NewDecoder(bytes.NewReader(data))
-	d.DisallowUnknownFields()
-	if err := d.Decode(&dog); err == nil {
+	if err := utils.UnmarshalJSON(data, &dog, "", true, true); err == nil {
 		u.Dog = dog
 		u.Type = CatsOrADogOrWolvesValueTypeDog
 		return nil
 	}
 
+	arrayOfCat := []Cat{}
+	if err := utils.UnmarshalJSON(data, &arrayOfCat, "", true, true); err == nil {
+		u.ArrayOfCat = arrayOfCat
+		u.Type = CatsOrADogOrWolvesValueTypeArrayOfCat
+		return nil
+	}
+
 	arrayOfWolf := []Wolf{}
-	d = json.NewDecoder(bytes.NewReader(data))
-	d.DisallowUnknownFields()
-	if err := d.Decode(&arrayOfWolf); err == nil {
+	if err := utils.UnmarshalJSON(data, &arrayOfWolf, "", true, true); err == nil {
 		u.ArrayOfWolf = arrayOfWolf
 		u.Type = CatsOrADogOrWolvesValueTypeArrayOfWolf
 		return nil
@@ -86,18 +78,18 @@ func (u *CatsOrADogOrWolvesValue) UnmarshalJSON(data []byte) error {
 
 func (u CatsOrADogOrWolvesValue) MarshalJSON() ([]byte, error) {
 	if u.ArrayOfCat != nil {
-		return json.Marshal(u.ArrayOfCat)
+		return utils.MarshalJSON(u.ArrayOfCat, "", true)
 	}
 
 	if u.Dog != nil {
-		return json.Marshal(u.Dog)
+		return utils.MarshalJSON(u.Dog, "", true)
 	}
 
 	if u.ArrayOfWolf != nil {
-		return json.Marshal(u.ArrayOfWolf)
+		return utils.MarshalJSON(u.ArrayOfWolf, "", true)
 	}
 
-	return nil, nil
+	return nil, errors.New("could not marshal union type: all fields are null")
 }
 
 // CatsOrADogOrWolves - Case 3

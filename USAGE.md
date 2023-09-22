@@ -7,11 +7,11 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/oneof-v1"
+	oneofv1 "github.com/speakeasy-sdks/oneof-v1"
 )
 
 func main() {
-    s := oneof.New()
+    s := oneofv1.New()
 
     ctx := context.Background()
     res, err := s.ArrayOfModelWithOneofModelsInside.GetGenerate13(ctx)

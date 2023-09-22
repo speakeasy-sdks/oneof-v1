@@ -3,9 +3,8 @@
 package shared
 
 import (
-	"bytes"
-	"encoding/json"
 	"errors"
+	"github.com/speakeasy-sdks/oneof-v1/pkg/utils"
 )
 
 type CatOrDogValueType string
@@ -41,21 +40,16 @@ func CreateCatOrDogValueDog(dog Dog) CatOrDogValue {
 }
 
 func (u *CatOrDogValue) UnmarshalJSON(data []byte) error {
-	var d *json.Decoder
 
 	cat := new(Cat)
-	d = json.NewDecoder(bytes.NewReader(data))
-	d.DisallowUnknownFields()
-	if err := d.Decode(&cat); err == nil {
+	if err := utils.UnmarshalJSON(data, &cat, "", true, true); err == nil {
 		u.Cat = cat
 		u.Type = CatOrDogValueTypeCat
 		return nil
 	}
 
 	dog := new(Dog)
-	d = json.NewDecoder(bytes.NewReader(data))
-	d.DisallowUnknownFields()
-	if err := d.Decode(&dog); err == nil {
+	if err := utils.UnmarshalJSON(data, &dog, "", true, true); err == nil {
 		u.Dog = dog
 		u.Type = CatOrDogValueTypeDog
 		return nil
@@ -66,14 +60,14 @@ func (u *CatOrDogValue) UnmarshalJSON(data []byte) error {
 
 func (u CatOrDogValue) MarshalJSON() ([]byte, error) {
 	if u.Cat != nil {
-		return json.Marshal(u.Cat)
+		return utils.MarshalJSON(u.Cat, "", true)
 	}
 
 	if u.Dog != nil {
-		return json.Marshal(u.Dog)
+		return utils.MarshalJSON(u.Dog, "", true)
 	}
 
-	return nil, nil
+	return nil, errors.New("could not marshal union type: all fields are null")
 }
 
 // CatOrDog - Case 1
