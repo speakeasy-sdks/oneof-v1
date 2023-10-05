@@ -1,4 +1,5 @@
 # SimpleXMLModel
+(*SimpleXMLModel*)
 
 ### Available Operations
 
@@ -111,7 +112,7 @@ func main() {
     s := oneofv1.New()
 
     ctx := context.Background()
-    res, err := s.SimpleXMLModel.Validate(ctx, []byte("error"))
+    res, err := s.SimpleXMLModel.Validate(ctx, []byte("[:ki7hA&_\""))
     if err != nil {
         log.Fatal(err)
     }
@@ -155,7 +156,7 @@ func main() {
     s := oneofv1.New()
 
     ctx := context.Background()
-    res, err := s.SimpleXMLModel.Validate1(ctx, []byte("deserunt"))
+    res, err := s.SimpleXMLModel.Validate1(ctx, []byte("R(h=I2U1f1"))
     if err != nil {
         log.Fatal(err)
     }

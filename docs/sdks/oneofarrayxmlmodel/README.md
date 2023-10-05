@@ -1,4 +1,5 @@
 # OneofArrayXMLModel
+(*OneofArrayXMLModel*)
 
 ### Available Operations
 
@@ -111,7 +112,7 @@ func main() {
     s := oneofv1.New()
 
     ctx := context.Background()
-    res, err := s.OneofArrayXMLModel.PostValidate11(ctx, []byte("distinctio"))
+    res, err := s.OneofArrayXMLModel.PostValidate11(ctx, []byte("[.$i%e9YEw"))
     if err != nil {
         log.Fatal(err)
     }
@@ -155,7 +156,7 @@ func main() {
     s := oneofv1.New()
 
     ctx := context.Background()
-    res, err := s.OneofArrayXMLModel.PostValidate2(ctx, []byte("quibusdam"))
+    res, err := s.OneofArrayXMLModel.PostValidate2(ctx, []byte("o#0;e5bE!{"))
     if err != nil {
         log.Fatal(err)
     }

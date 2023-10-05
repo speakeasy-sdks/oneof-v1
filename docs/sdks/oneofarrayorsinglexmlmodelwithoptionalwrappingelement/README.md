@@ -1,4 +1,5 @@
 # OneofArrayOrSingleXMLModelWithOptionalWrappingElement
+(*OneofArrayOrSingleXMLModelWithOptionalWrappingElement*)
 
 ### Available Operations
 
@@ -155,7 +156,7 @@ func main() {
     s := oneofv1.New()
 
     ctx := context.Background()
-    res, err := s.OneofArrayOrSingleXMLModelWithOptionalWrappingElement.PostValidate12(ctx, []byte("unde"))
+    res, err := s.OneofArrayOrSingleXMLModelWithOptionalWrappingElement.PostValidate12(ctx, []byte("dG.=%vb}GD"))
     if err != nil {
         log.Fatal(err)
     }
@@ -199,7 +200,7 @@ func main() {
     s := oneofv1.New()
 
     ctx := context.Background()
-    res, err := s.OneofArrayOrSingleXMLModelWithOptionalWrappingElement.PostValidate3(ctx, []byte("nulla"))
+    res, err := s.OneofArrayOrSingleXMLModelWithOptionalWrappingElement.PostValidate3(ctx, []byte("Sw@\"}sPH!\"))
     if err != nil {
         log.Fatal(err)
     }
@@ -243,7 +244,7 @@ func main() {
     s := oneofv1.New()
 
     ctx := context.Background()
-    res, err := s.OneofArrayOrSingleXMLModelWithOptionalWrappingElement.Validate2(ctx, []byte("corrupti"))
+    res, err := s.OneofArrayOrSingleXMLModelWithOptionalWrappingElement.Validate2(ctx, []byte("Kb8,gas|Ww"))
     if err != nil {
         log.Fatal(err)
     }
