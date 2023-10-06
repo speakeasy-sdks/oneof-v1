@@ -1,4 +1,5 @@
 # ArrayOfModelWithOneofModelsInside
+(*ArrayOfModelWithOneofModelsInside*)
 
 ### Available Operations
 
@@ -111,7 +112,7 @@ func main() {
     s := oneofv1.New()
 
     ctx := context.Background()
-    res, err := s.ArrayOfModelWithOneofModelsInside.PostValidate13(ctx, []byte("corrupti"))
+    res, err := s.ArrayOfModelWithOneofModelsInside.PostValidate13(ctx, []byte("rXJ#*DNx!F"))
     if err != nil {
         log.Fatal(err)
     }
@@ -155,7 +156,7 @@ func main() {
     s := oneofv1.New()
 
     ctx := context.Background()
-    res, err := s.ArrayOfModelWithOneofModelsInside.PostValidate4(ctx, []byte("provident"))
+    res, err := s.ArrayOfModelWithOneofModelsInside.PostValidate4(ctx, []byte("?4XB(ZSf0!"))
     if err != nil {
         log.Fatal(err)
     }
