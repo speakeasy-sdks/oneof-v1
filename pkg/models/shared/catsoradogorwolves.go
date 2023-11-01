@@ -52,9 +52,9 @@ func CreateCatsOrADogOrWolvesValueArrayOfWolf(arrayOfWolf []Wolf) CatsOrADogOrWo
 
 func (u *CatsOrADogOrWolvesValue) UnmarshalJSON(data []byte) error {
 
-	dog := new(Dog)
+	dog := Dog{}
 	if err := utils.UnmarshalJSON(data, &dog, "", true, true); err == nil {
-		u.Dog = dog
+		u.Dog = &dog
 		u.Type = CatsOrADogOrWolvesValueTypeDog
 		return nil
 	}

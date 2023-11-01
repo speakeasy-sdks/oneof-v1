@@ -41,16 +41,16 @@ func CreateArrayOfCatOrDogObjectsValueDog(dog Dog) ArrayOfCatOrDogObjectsValue {
 
 func (u *ArrayOfCatOrDogObjectsValue) UnmarshalJSON(data []byte) error {
 
-	cat := new(Cat)
+	cat := Cat{}
 	if err := utils.UnmarshalJSON(data, &cat, "", true, true); err == nil {
-		u.Cat = cat
+		u.Cat = &cat
 		u.Type = ArrayOfCatOrDogObjectsValueTypeCat
 		return nil
 	}
 
-	dog := new(Dog)
+	dog := Dog{}
 	if err := utils.UnmarshalJSON(data, &dog, "", true, true); err == nil {
-		u.Dog = dog
+		u.Dog = &dog
 		u.Type = ArrayOfCatOrDogObjectsValueTypeDog
 		return nil
 	}
