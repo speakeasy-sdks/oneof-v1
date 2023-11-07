@@ -8,12 +8,12 @@ import (
 
 type PostValidate13Response struct {
 	// HTTP response content type for this operation
-	ContentType                      string
-	PostValidate13200TextPlainObject *string
+	ContentType string
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
+	Res         *string
 }
 
 func (o *PostValidate13Response) GetContentType() string {
@@ -21,13 +21,6 @@ func (o *PostValidate13Response) GetContentType() string {
 		return ""
 	}
 	return o.ContentType
-}
-
-func (o *PostValidate13Response) GetPostValidate13200TextPlainObject() *string {
-	if o == nil {
-		return nil
-	}
-	return o.PostValidate13200TextPlainObject
 }
 
 func (o *PostValidate13Response) GetStatusCode() int {
@@ -42,4 +35,11 @@ func (o *PostValidate13Response) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
+}
+
+func (o *PostValidate13Response) GetRes() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Res
 }

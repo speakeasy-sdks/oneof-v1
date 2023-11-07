@@ -12,8 +12,8 @@ type ValidateResponse struct {
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
-	RawResponse                *http.Response
-	Validate200TextPlainObject *string
+	RawResponse *http.Response
+	Res         *string
 }
 
 func (o *ValidateResponse) GetContentType() string {
@@ -37,9 +37,9 @@ func (o *ValidateResponse) GetRawResponse() *http.Response {
 	return o.RawResponse
 }
 
-func (o *ValidateResponse) GetValidate200TextPlainObject() *string {
+func (o *ValidateResponse) GetRes() *string {
 	if o == nil {
 		return nil
 	}
-	return o.Validate200TextPlainObject
+	return o.Res
 }

@@ -1,5 +1,5 @@
 # ArrayOfModelWithOneofModelsInside
-(*ArrayOfModelWithOneofModelsInside*)
+(*.ArrayOfModelWithOneofModelsInside*)
 
 ### Available Operations
 
@@ -112,12 +112,12 @@ func main() {
     s := oneofv1.New()
 
     ctx := context.Background()
-    res, err := s.ArrayOfModelWithOneofModelsInside.PostValidate13(ctx, []byte("rXJ#*DNx!F"))
+    res, err := s.ArrayOfModelWithOneofModelsInside.PostValidate13(ctx, []byte("0xDd9028aE08"))
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.PostValidate13200TextPlainObject != nil {
+    if res.Res != nil {
         // handle response
     }
 }
@@ -156,12 +156,12 @@ func main() {
     s := oneofv1.New()
 
     ctx := context.Background()
-    res, err := s.ArrayOfModelWithOneofModelsInside.PostValidate4(ctx, []byte("?4XB(ZSf0!"))
+    res, err := s.ArrayOfModelWithOneofModelsInside.PostValidate4(ctx, []byte("0x74d81dbA30"))
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.PostValidate4200TextPlainObject != nil {
+    if res.Res != nil {
         // handle response
     }
 }

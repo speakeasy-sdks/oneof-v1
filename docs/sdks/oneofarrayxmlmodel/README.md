@@ -1,5 +1,5 @@
 # OneofArrayXMLModel
-(*OneofArrayXMLModel*)
+(*.OneofArrayXMLModel*)
 
 ### Available Operations
 
@@ -112,12 +112,12 @@ func main() {
     s := oneofv1.New()
 
     ctx := context.Background()
-    res, err := s.OneofArrayXMLModel.PostValidate11(ctx, []byte("[.$i%e9YEw"))
+    res, err := s.OneofArrayXMLModel.PostValidate11(ctx, []byte("0xd30B1A5d8E"))
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.PostValidate11200TextPlainObject != nil {
+    if res.Res != nil {
         // handle response
     }
 }
@@ -156,12 +156,12 @@ func main() {
     s := oneofv1.New()
 
     ctx := context.Background()
-    res, err := s.OneofArrayXMLModel.PostValidate2(ctx, []byte("o#0;e5bE!{"))
+    res, err := s.OneofArrayXMLModel.PostValidate2(ctx, []byte("0xC036A4f80F"))
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.PostValidate2200TextPlainObject != nil {
+    if res.Res != nil {
         // handle response
     }
 }

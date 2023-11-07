@@ -1,5 +1,5 @@
 # SimpleXMLModel
-(*SimpleXMLModel*)
+(*.SimpleXMLModel*)
 
 ### Available Operations
 
@@ -112,12 +112,12 @@ func main() {
     s := oneofv1.New()
 
     ctx := context.Background()
-    res, err := s.SimpleXMLModel.Validate(ctx, []byte("[:ki7hA&_\""))
+    res, err := s.SimpleXMLModel.Validate(ctx, []byte("0xd6BB5B71e0"))
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.Validate200TextPlainObject != nil {
+    if res.Res != nil {
         // handle response
     }
 }
@@ -156,12 +156,12 @@ func main() {
     s := oneofv1.New()
 
     ctx := context.Background()
-    res, err := s.SimpleXMLModel.Validate1(ctx, []byte("R(h=I2U1f1"))
+    res, err := s.SimpleXMLModel.Validate1(ctx, []byte("0xb1A694c3A3"))
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.Validate1200TextPlainObject != nil {
+    if res.Res != nil {
         // handle response
     }
 }

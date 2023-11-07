@@ -14,19 +14,19 @@ import (
 	"strings"
 )
 
-type arrayOfModelWithOneofModelsInside struct {
+type ArrayOfModelWithOneofModelsInside struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newArrayOfModelWithOneofModelsInside(sdkConfig sdkConfiguration) *arrayOfModelWithOneofModelsInside {
-	return &arrayOfModelWithOneofModelsInside{
+func newArrayOfModelWithOneofModelsInside(sdkConfig sdkConfiguration) *ArrayOfModelWithOneofModelsInside {
+	return &ArrayOfModelWithOneofModelsInside{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // GetGenerate13 - Generate1
 // This endpoint returns a 'ArrayOfCatOrDogObjects' model as xml.
-func (s *arrayOfModelWithOneofModelsInside) GetGenerate13(ctx context.Context) (*operations.GetGenerate13Response, error) {
+func (s *ArrayOfModelWithOneofModelsInside) GetGenerate13(ctx context.Context) (*operations.GetGenerate13Response, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/oneof/arrayofcatordogobjects/dog"
 
@@ -80,7 +80,7 @@ func (s *arrayOfModelWithOneofModelsInside) GetGenerate13(ctx context.Context) (
 
 // GetGenerate4 - Generate
 // This endpoint returns a 'ArrayOfCatOrDogObjects' model as xml.
-func (s *arrayOfModelWithOneofModelsInside) GetGenerate4(ctx context.Context) (*operations.GetGenerate4Response, error) {
+func (s *ArrayOfModelWithOneofModelsInside) GetGenerate4(ctx context.Context) (*operations.GetGenerate4Response, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/oneof/arrayofcatordogobjects/catsanddogs"
 
@@ -134,7 +134,7 @@ func (s *arrayOfModelWithOneofModelsInside) GetGenerate4(ctx context.Context) (*
 
 // PostValidate13 - Validate1
 // This endpoint expects a 'ArrayOfCatOrDogObjects' model as xml.
-func (s *arrayOfModelWithOneofModelsInside) PostValidate13(ctx context.Context, request []byte) (*operations.PostValidate13Response, error) {
+func (s *ArrayOfModelWithOneofModelsInside) PostValidate13(ctx context.Context, request []byte) (*operations.PostValidate13Response, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/oneof/arrayofcatordogobjects/dog"
 
@@ -184,7 +184,7 @@ func (s *arrayOfModelWithOneofModelsInside) PostValidate13(ctx context.Context, 
 		switch {
 		case utils.MatchContentType(contentType, `text/plain`):
 			out := string(rawBody)
-			res.PostValidate13200TextPlainObject = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -199,7 +199,7 @@ func (s *arrayOfModelWithOneofModelsInside) PostValidate13(ctx context.Context, 
 
 // PostValidate4 - Validate
 // This endpoint expects a 'ArrayOfCatOrDogObjects' model as xml.
-func (s *arrayOfModelWithOneofModelsInside) PostValidate4(ctx context.Context, request []byte) (*operations.PostValidate4Response, error) {
+func (s *ArrayOfModelWithOneofModelsInside) PostValidate4(ctx context.Context, request []byte) (*operations.PostValidate4Response, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/oneof/arrayofcatordogobjects/catsanddogs"
 
@@ -249,7 +249,7 @@ func (s *arrayOfModelWithOneofModelsInside) PostValidate4(ctx context.Context, r
 		switch {
 		case utils.MatchContentType(contentType, `text/plain`):
 			out := string(rawBody)
-			res.PostValidate4200TextPlainObject = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}

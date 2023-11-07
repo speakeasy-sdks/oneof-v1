@@ -69,3 +69,13 @@ Based on:
 - [go v0.5.1] .
 ### Releases
 - [Go v0.5.1] https://github.com/speakeasy-sdks/oneof-v1/releases/tag/v0.5.1 - .
+
+## 2023-11-07 00:54:47
+### Changes
+Based on:
+- OpenAPI Doc 0.0.0 
+- Speakeasy CLI 1.114.1 (2.181.1) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [go v0.6.0] .
+### Releases
+- [Go v0.6.0] https://github.com/speakeasy-sdks/oneof-v1/releases/tag/v0.6.0 - .

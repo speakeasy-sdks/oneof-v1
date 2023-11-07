@@ -7,58 +7,58 @@ import (
 	"github.com/speakeasy-sdks/oneof-v1/pkg/utils"
 )
 
-type ArrayOfCatOrDogObjectsValueType string
+type ValueType string
 
 const (
-	ArrayOfCatOrDogObjectsValueTypeCat ArrayOfCatOrDogObjectsValueType = "Cat"
-	ArrayOfCatOrDogObjectsValueTypeDog ArrayOfCatOrDogObjectsValueType = "Dog"
+	ValueTypeCat ValueType = "Cat"
+	ValueTypeDog ValueType = "Dog"
 )
 
-type ArrayOfCatOrDogObjectsValue struct {
+type Value struct {
 	Cat *Cat
 	Dog *Dog
 
-	Type ArrayOfCatOrDogObjectsValueType
+	Type ValueType
 }
 
-func CreateArrayOfCatOrDogObjectsValueCat(cat Cat) ArrayOfCatOrDogObjectsValue {
-	typ := ArrayOfCatOrDogObjectsValueTypeCat
+func CreateValueCat(cat Cat) Value {
+	typ := ValueTypeCat
 
-	return ArrayOfCatOrDogObjectsValue{
+	return Value{
 		Cat:  &cat,
 		Type: typ,
 	}
 }
 
-func CreateArrayOfCatOrDogObjectsValueDog(dog Dog) ArrayOfCatOrDogObjectsValue {
-	typ := ArrayOfCatOrDogObjectsValueTypeDog
+func CreateValueDog(dog Dog) Value {
+	typ := ValueTypeDog
 
-	return ArrayOfCatOrDogObjectsValue{
+	return Value{
 		Dog:  &dog,
 		Type: typ,
 	}
 }
 
-func (u *ArrayOfCatOrDogObjectsValue) UnmarshalJSON(data []byte) error {
+func (u *Value) UnmarshalJSON(data []byte) error {
 
 	cat := Cat{}
 	if err := utils.UnmarshalJSON(data, &cat, "", true, true); err == nil {
 		u.Cat = &cat
-		u.Type = ArrayOfCatOrDogObjectsValueTypeCat
+		u.Type = ValueTypeCat
 		return nil
 	}
 
 	dog := Dog{}
 	if err := utils.UnmarshalJSON(data, &dog, "", true, true); err == nil {
 		u.Dog = &dog
-		u.Type = ArrayOfCatOrDogObjectsValueTypeDog
+		u.Type = ValueTypeDog
 		return nil
 	}
 
 	return errors.New("could not unmarshal into supported union types")
 }
 
-func (u ArrayOfCatOrDogObjectsValue) MarshalJSON() ([]byte, error) {
+func (u Value) MarshalJSON() ([]byte, error) {
 	if u.Cat != nil {
 		return utils.MarshalJSON(u.Cat, "", true)
 	}
@@ -72,12 +72,12 @@ func (u ArrayOfCatOrDogObjectsValue) MarshalJSON() ([]byte, error) {
 
 // ArrayOfCatOrDogObjects - Case 4
 type ArrayOfCatOrDogObjects struct {
-	Value []ArrayOfCatOrDogObjectsValue
+	Value []Value
 }
 
-func (o *ArrayOfCatOrDogObjects) GetValue() []ArrayOfCatOrDogObjectsValue {
+func (o *ArrayOfCatOrDogObjects) GetValue() []Value {
 	if o == nil {
-		return []ArrayOfCatOrDogObjectsValue{}
+		return []Value{}
 	}
 	return o.Value
 }

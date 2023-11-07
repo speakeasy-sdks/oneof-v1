@@ -14,19 +14,19 @@ import (
 	"strings"
 )
 
-type oneofXMLModel struct {
+type OneofXMLModel struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newOneofXMLModel(sdkConfig sdkConfiguration) *oneofXMLModel {
-	return &oneofXMLModel{
+func newOneofXMLModel(sdkConfig sdkConfiguration) *OneofXMLModel {
+	return &OneofXMLModel{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // GetGenerate - Generate
 // This endpoint returns a 'CatOrDog' model as xml.
-func (s *oneofXMLModel) GetGenerate(ctx context.Context) (*operations.GetGenerateResponse, error) {
+func (s *OneofXMLModel) GetGenerate(ctx context.Context) (*operations.GetGenerateResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/oneof/catordog/cat"
 
@@ -80,7 +80,7 @@ func (s *oneofXMLModel) GetGenerate(ctx context.Context) (*operations.GetGenerat
 
 // GetGenerate1 - Generate1
 // This endpoint returns a 'CatOrDog' model as xml.
-func (s *oneofXMLModel) GetGenerate1(ctx context.Context) (*operations.GetGenerate1Response, error) {
+func (s *OneofXMLModel) GetGenerate1(ctx context.Context) (*operations.GetGenerate1Response, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/oneof/catordog/dog"
 
@@ -134,7 +134,7 @@ func (s *oneofXMLModel) GetGenerate1(ctx context.Context) (*operations.GetGenera
 
 // PostValidate - Validate
 // This endpoint expects a 'CatOrDog' model as xml.
-func (s *oneofXMLModel) PostValidate(ctx context.Context, request []byte) (*operations.PostValidateResponse, error) {
+func (s *OneofXMLModel) PostValidate(ctx context.Context, request []byte) (*operations.PostValidateResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/oneof/catordog/cat"
 
@@ -184,7 +184,7 @@ func (s *oneofXMLModel) PostValidate(ctx context.Context, request []byte) (*oper
 		switch {
 		case utils.MatchContentType(contentType, `text/plain`):
 			out := string(rawBody)
-			res.PostValidate200TextPlainObject = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -199,7 +199,7 @@ func (s *oneofXMLModel) PostValidate(ctx context.Context, request []byte) (*oper
 
 // PostValidate1 - Validate1
 // This endpoint expects a 'CatOrDog' model as xml.
-func (s *oneofXMLModel) PostValidate1(ctx context.Context, request []byte) (*operations.PostValidate1Response, error) {
+func (s *OneofXMLModel) PostValidate1(ctx context.Context, request []byte) (*operations.PostValidate1Response, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/oneof/catordog/dog"
 
@@ -249,7 +249,7 @@ func (s *oneofXMLModel) PostValidate1(ctx context.Context, request []byte) (*ope
 		switch {
 		case utils.MatchContentType(contentType, `text/plain`):
 			out := string(rawBody)
-			res.PostValidate1200TextPlainObject = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}

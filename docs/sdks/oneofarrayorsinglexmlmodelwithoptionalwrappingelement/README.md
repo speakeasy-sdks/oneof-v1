@@ -1,5 +1,5 @@
 # OneofArrayOrSingleXMLModelWithOptionalWrappingElement
-(*OneofArrayOrSingleXMLModelWithOptionalWrappingElement*)
+(*.OneofArrayOrSingleXMLModelWithOptionalWrappingElement*)
 
 ### Available Operations
 
@@ -156,12 +156,12 @@ func main() {
     s := oneofv1.New()
 
     ctx := context.Background()
-    res, err := s.OneofArrayOrSingleXMLModelWithOptionalWrappingElement.PostValidate12(ctx, []byte("dG.=%vb}GD"))
+    res, err := s.OneofArrayOrSingleXMLModelWithOptionalWrappingElement.PostValidate12(ctx, []byte("0xf9361EfF98"))
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.PostValidate12200TextPlainObject != nil {
+    if res.Res != nil {
         // handle response
     }
 }
@@ -200,12 +200,12 @@ func main() {
     s := oneofv1.New()
 
     ctx := context.Background()
-    res, err := s.OneofArrayOrSingleXMLModelWithOptionalWrappingElement.PostValidate3(ctx, []byte("Sw@\"}sPH!\"))
+    res, err := s.OneofArrayOrSingleXMLModelWithOptionalWrappingElement.PostValidate3(ctx, []byte("0xcE70FDb90d"))
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.PostValidate3200TextPlainObject != nil {
+    if res.Res != nil {
         // handle response
     }
 }
@@ -244,12 +244,12 @@ func main() {
     s := oneofv1.New()
 
     ctx := context.Background()
-    res, err := s.OneofArrayOrSingleXMLModelWithOptionalWrappingElement.Validate2(ctx, []byte("Kb8,gas|Ww"))
+    res, err := s.OneofArrayOrSingleXMLModelWithOptionalWrappingElement.Validate2(ctx, []byte("0x9f52AfDFcE"))
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.Validate2200TextPlainObject != nil {
+    if res.Res != nil {
         // handle response
     }
 }

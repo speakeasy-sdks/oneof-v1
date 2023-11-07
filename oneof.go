@@ -62,11 +62,11 @@ func (c *sdkConfiguration) GetServerDetails() (string, map[string]string) {
 }
 
 type OneOf struct {
-	ArrayOfModelWithOneofModelsInside                     *arrayOfModelWithOneofModelsInside
-	OneofArrayXMLModel                                    *oneofArrayXMLModel
-	OneofArrayOrSingleXMLModelWithOptionalWrappingElement *oneofArrayOrSingleXMLModelWithOptionalWrappingElement
-	OneofXMLModel                                         *oneofXMLModel
-	SimpleXMLModel                                        *simpleXMLModel
+	ArrayOfModelWithOneofModelsInside                     *ArrayOfModelWithOneofModelsInside
+	SimpleXMLModel                                        *SimpleXMLModel
+	OneofArrayOrSingleXMLModelWithOptionalWrappingElement *OneofArrayOrSingleXMLModelWithOptionalWrappingElement
+	OneofArrayXMLModel                                    *OneofArrayXMLModel
+	OneofXMLModel                                         *OneofXMLModel
 
 	sdkConfiguration sdkConfiguration
 }
@@ -121,9 +121,9 @@ func New(opts ...SDKOption) *OneOf {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "0.0.0",
-			SDKVersion:        "0.5.1",
-			GenVersion:        "2.173.0",
-			UserAgent:         "speakeasy-sdk/go 0.5.1 2.173.0 0.0.0 github.com/speakeasy-sdks/oneof-v1",
+			SDKVersion:        "0.6.0",
+			GenVersion:        "2.181.1",
+			UserAgent:         "speakeasy-sdk/go 0.6.0 2.181.1 0.0.0 github.com/speakeasy-sdks/oneof-v1",
 		},
 	}
 	for _, opt := range opts {
@@ -140,13 +140,13 @@ func New(opts ...SDKOption) *OneOf {
 
 	sdk.ArrayOfModelWithOneofModelsInside = newArrayOfModelWithOneofModelsInside(sdk.sdkConfiguration)
 
-	sdk.OneofArrayXMLModel = newOneofArrayXMLModel(sdk.sdkConfiguration)
+	sdk.SimpleXMLModel = newSimpleXMLModel(sdk.sdkConfiguration)
 
 	sdk.OneofArrayOrSingleXMLModelWithOptionalWrappingElement = newOneofArrayOrSingleXMLModelWithOptionalWrappingElement(sdk.sdkConfiguration)
 
-	sdk.OneofXMLModel = newOneofXMLModel(sdk.sdkConfiguration)
+	sdk.OneofArrayXMLModel = newOneofArrayXMLModel(sdk.sdkConfiguration)
 
-	sdk.SimpleXMLModel = newSimpleXMLModel(sdk.sdkConfiguration)
+	sdk.OneofXMLModel = newOneofXMLModel(sdk.sdkConfiguration)
 
 	return sdk
 }
