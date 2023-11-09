@@ -40,21 +40,21 @@ func main() {
 ## Available Resources and Operations
 
 
-### [.ArrayOfModelWithOneofModelsInside](docs/sdks/arrayofmodelwithoneofmodelsinside/README.md)
+### [ArrayOfModelWithOneofModelsInside](docs/sdks/arrayofmodelwithoneofmodelsinside/README.md)
 
 * [GetGenerate13](docs/sdks/arrayofmodelwithoneofmodelsinside/README.md#getgenerate13) - Generate1
 * [GetGenerate4](docs/sdks/arrayofmodelwithoneofmodelsinside/README.md#getgenerate4) - Generate
 * [PostValidate13](docs/sdks/arrayofmodelwithoneofmodelsinside/README.md#postvalidate13) - Validate1
 * [PostValidate4](docs/sdks/arrayofmodelwithoneofmodelsinside/README.md#postvalidate4) - Validate
 
-### [.SimpleXMLModel](docs/sdks/simplexmlmodel/README.md)
+### [SimpleXMLModel](docs/sdks/simplexmlmodel/README.md)
 
 * [Generate](docs/sdks/simplexmlmodel/README.md#generate) - Generate
 * [Generate1](docs/sdks/simplexmlmodel/README.md#generate1) - Generate1
 * [Validate](docs/sdks/simplexmlmodel/README.md#validate) - Validate
 * [Validate1](docs/sdks/simplexmlmodel/README.md#validate1) - Validate1
 
-### [.OneofArrayOrSingleXMLModelWithOptionalWrappingElement](docs/sdks/oneofarrayorsinglexmlmodelwithoptionalwrappingelement/README.md)
+### [OneofArrayOrSingleXMLModelWithOptionalWrappingElement](docs/sdks/oneofarrayorsinglexmlmodelwithoptionalwrappingelement/README.md)
 
 * [Generate2](docs/sdks/oneofarrayorsinglexmlmodelwithoptionalwrappingelement/README.md#generate2) - Generate2
 * [GetGenerate12](docs/sdks/oneofarrayorsinglexmlmodelwithoptionalwrappingelement/README.md#getgenerate12) - Generate1
@@ -63,14 +63,14 @@ func main() {
 * [PostValidate3](docs/sdks/oneofarrayorsinglexmlmodelwithoptionalwrappingelement/README.md#postvalidate3) - Validate
 * [Validate2](docs/sdks/oneofarrayorsinglexmlmodelwithoptionalwrappingelement/README.md#validate2) - Validate2
 
-### [.OneofArrayXMLModel](docs/sdks/oneofarrayxmlmodel/README.md)
+### [OneofArrayXMLModel](docs/sdks/oneofarrayxmlmodel/README.md)
 
 * [GetGenerate11](docs/sdks/oneofarrayxmlmodel/README.md#getgenerate11) - Generate1
 * [GetGenerate2](docs/sdks/oneofarrayxmlmodel/README.md#getgenerate2) - Generate
 * [PostValidate11](docs/sdks/oneofarrayxmlmodel/README.md#postvalidate11) - Validate1
 * [PostValidate2](docs/sdks/oneofarrayxmlmodel/README.md#postvalidate2) - Validate
 
-### [.OneofXMLModel](docs/sdks/oneofxmlmodel/README.md)
+### [OneofXMLModel](docs/sdks/oneofxmlmodel/README.md)
 
 * [GetGenerate](docs/sdks/oneofxmlmodel/README.md#getgenerate) - Generate
 * [GetGenerate1](docs/sdks/oneofxmlmodel/README.md#getgenerate1) - Generate1
@@ -107,7 +107,40 @@ Here's an example of one such pagination call:
 <!-- Start Error Handling -->
 # Error Handling
 
-Handling errors in your SDK should largely match your expectations.  All operations return a response object or an error, they will never return both.  When specified by the OpenAPI spec document, the SDK will return the appropriate subclass.
+Handling errors in this SDK should largely match your expectations.  All operations return a response object or an error, they will never return both.  When specified by the OpenAPI spec document, the SDK will return the appropriate subclass.
+
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
+
+
+## Example
+
+```go
+package main
+
+import (
+	"context"
+	oneofv1 "github.com/speakeasy-sdks/oneof-v1"
+	"log"
+)
+
+func main() {
+	s := oneofv1.New()
+
+	ctx := context.Background()
+	res, err := s.ArrayOfModelWithOneofModelsInside.GetGenerate13(ctx)
+	if err != nil {
+
+		var e *sdkerrors.SDKError
+		if errors.As(err, &e) {
+			// handle error
+			log.Fatal(e.Error())
+		}
+	}
+}
+
+```
 <!-- End Error Handling -->
 
 

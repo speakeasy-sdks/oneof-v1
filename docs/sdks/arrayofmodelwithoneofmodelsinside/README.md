@@ -1,5 +1,5 @@
 # ArrayOfModelWithOneofModelsInside
-(*.ArrayOfModelWithOneofModelsInside*)
+(*ArrayOfModelWithOneofModelsInside*)
 
 ### Available Operations
 
@@ -47,8 +47,10 @@ func main() {
 
 ### Response
 
-**[*operations.GetGenerate13Response](../../models/operations/getgenerate13response.md), error**
-
+**[*operations.GetGenerate13Response](../../pkg/models/operations/getgenerate13response.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
 
 ## GetGenerate4
 
@@ -89,8 +91,10 @@ func main() {
 
 ### Response
 
-**[*operations.GetGenerate4Response](../../models/operations/getgenerate4response.md), error**
-
+**[*operations.GetGenerate4Response](../../pkg/models/operations/getgenerate4response.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
 
 ## PostValidate13
 
@@ -128,13 +132,15 @@ func main() {
 | Parameter                                             | Type                                                  | Required                                              | Description                                           |
 | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 | `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
-| `request`                                             | [[]byte](../../models//.md)                           | :heavy_check_mark:                                    | The request object to use for the request.            |
+| `request`                                             | [[]byte](../../.md)                                   | :heavy_check_mark:                                    | The request object to use for the request.            |
 
 
 ### Response
 
-**[*operations.PostValidate13Response](../../models/operations/postvalidate13response.md), error**
-
+**[*operations.PostValidate13Response](../../pkg/models/operations/postvalidate13response.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
 
 ## PostValidate4
 
@@ -172,10 +178,12 @@ func main() {
 | Parameter                                             | Type                                                  | Required                                              | Description                                           |
 | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 | `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
-| `request`                                             | [[]byte](../../models//.md)                           | :heavy_check_mark:                                    | The request object to use for the request.            |
+| `request`                                             | [[]byte](../../.md)                                   | :heavy_check_mark:                                    | The request object to use for the request.            |
 
 
 ### Response
 
-**[*operations.PostValidate4Response](../../models/operations/postvalidate4response.md), error**
-
+**[*operations.PostValidate4Response](../../pkg/models/operations/postvalidate4response.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |

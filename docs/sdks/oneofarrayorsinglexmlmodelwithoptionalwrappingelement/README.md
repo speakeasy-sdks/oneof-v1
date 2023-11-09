@@ -1,5 +1,5 @@
 # OneofArrayOrSingleXMLModelWithOptionalWrappingElement
-(*.OneofArrayOrSingleXMLModelWithOptionalWrappingElement*)
+(*OneofArrayOrSingleXMLModelWithOptionalWrappingElement*)
 
 ### Available Operations
 
@@ -49,8 +49,10 @@ func main() {
 
 ### Response
 
-**[*operations.Generate2Response](../../models/operations/generate2response.md), error**
-
+**[*operations.Generate2Response](../../pkg/models/operations/generate2response.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
 
 ## GetGenerate12
 
@@ -91,8 +93,10 @@ func main() {
 
 ### Response
 
-**[*operations.GetGenerate12Response](../../models/operations/getgenerate12response.md), error**
-
+**[*operations.GetGenerate12Response](../../pkg/models/operations/getgenerate12response.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
 
 ## GetGenerate3
 
@@ -133,8 +137,10 @@ func main() {
 
 ### Response
 
-**[*operations.GetGenerate3Response](../../models/operations/getgenerate3response.md), error**
-
+**[*operations.GetGenerate3Response](../../pkg/models/operations/getgenerate3response.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
 
 ## PostValidate12
 
@@ -172,13 +178,15 @@ func main() {
 | Parameter                                             | Type                                                  | Required                                              | Description                                           |
 | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 | `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
-| `request`                                             | [[]byte](../../models//.md)                           | :heavy_check_mark:                                    | The request object to use for the request.            |
+| `request`                                             | [[]byte](../../.md)                                   | :heavy_check_mark:                                    | The request object to use for the request.            |
 
 
 ### Response
 
-**[*operations.PostValidate12Response](../../models/operations/postvalidate12response.md), error**
-
+**[*operations.PostValidate12Response](../../pkg/models/operations/postvalidate12response.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
 
 ## PostValidate3
 
@@ -216,13 +224,15 @@ func main() {
 | Parameter                                             | Type                                                  | Required                                              | Description                                           |
 | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 | `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
-| `request`                                             | [[]byte](../../models//.md)                           | :heavy_check_mark:                                    | The request object to use for the request.            |
+| `request`                                             | [[]byte](../../.md)                                   | :heavy_check_mark:                                    | The request object to use for the request.            |
 
 
 ### Response
 
-**[*operations.PostValidate3Response](../../models/operations/postvalidate3response.md), error**
-
+**[*operations.PostValidate3Response](../../pkg/models/operations/postvalidate3response.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
 
 ## Validate2
 
@@ -260,10 +270,12 @@ func main() {
 | Parameter                                             | Type                                                  | Required                                              | Description                                           |
 | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 | `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
-| `request`                                             | [[]byte](../../models//.md)                           | :heavy_check_mark:                                    | The request object to use for the request.            |
+| `request`                                             | [[]byte](../../.md)                                   | :heavy_check_mark:                                    | The request object to use for the request.            |
 
 
 ### Response
 
-**[*operations.Validate2Response](../../models/operations/validate2response.md), error**
-
+**[*operations.Validate2Response](../../pkg/models/operations/validate2response.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |

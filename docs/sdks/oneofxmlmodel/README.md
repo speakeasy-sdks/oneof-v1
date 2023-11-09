@@ -1,5 +1,5 @@
 # OneofXMLModel
-(*.OneofXMLModel*)
+(*OneofXMLModel*)
 
 ### Available Operations
 
@@ -47,8 +47,10 @@ func main() {
 
 ### Response
 
-**[*operations.GetGenerateResponse](../../models/operations/getgenerateresponse.md), error**
-
+**[*operations.GetGenerateResponse](../../pkg/models/operations/getgenerateresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
 
 ## GetGenerate1
 
@@ -89,8 +91,10 @@ func main() {
 
 ### Response
 
-**[*operations.GetGenerate1Response](../../models/operations/getgenerate1response.md), error**
-
+**[*operations.GetGenerate1Response](../../pkg/models/operations/getgenerate1response.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
 
 ## PostValidate
 
@@ -128,13 +132,15 @@ func main() {
 | Parameter                                             | Type                                                  | Required                                              | Description                                           |
 | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 | `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
-| `request`                                             | [[]byte](../../models//.md)                           | :heavy_check_mark:                                    | The request object to use for the request.            |
+| `request`                                             | [[]byte](../../.md)                                   | :heavy_check_mark:                                    | The request object to use for the request.            |
 
 
 ### Response
 
-**[*operations.PostValidateResponse](../../models/operations/postvalidateresponse.md), error**
-
+**[*operations.PostValidateResponse](../../pkg/models/operations/postvalidateresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
 
 ## PostValidate1
 
@@ -172,10 +178,12 @@ func main() {
 | Parameter                                             | Type                                                  | Required                                              | Description                                           |
 | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 | `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
-| `request`                                             | [[]byte](../../models//.md)                           | :heavy_check_mark:                                    | The request object to use for the request.            |
+| `request`                                             | [[]byte](../../.md)                                   | :heavy_check_mark:                                    | The request object to use for the request.            |
 
 
 ### Response
 
-**[*operations.PostValidate1Response](../../models/operations/postvalidate1response.md), error**
-
+**[*operations.PostValidate1Response](../../pkg/models/operations/postvalidate1response.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |

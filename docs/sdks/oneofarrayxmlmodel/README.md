@@ -1,5 +1,5 @@
 # OneofArrayXMLModel
-(*.OneofArrayXMLModel*)
+(*OneofArrayXMLModel*)
 
 ### Available Operations
 
@@ -47,8 +47,10 @@ func main() {
 
 ### Response
 
-**[*operations.GetGenerate11Response](../../models/operations/getgenerate11response.md), error**
-
+**[*operations.GetGenerate11Response](../../pkg/models/operations/getgenerate11response.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
 
 ## GetGenerate2
 
@@ -89,8 +91,10 @@ func main() {
 
 ### Response
 
-**[*operations.GetGenerate2Response](../../models/operations/getgenerate2response.md), error**
-
+**[*operations.GetGenerate2Response](../../pkg/models/operations/getgenerate2response.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
 
 ## PostValidate11
 
@@ -128,13 +132,15 @@ func main() {
 | Parameter                                             | Type                                                  | Required                                              | Description                                           |
 | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 | `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
-| `request`                                             | [[]byte](../../models//.md)                           | :heavy_check_mark:                                    | The request object to use for the request.            |
+| `request`                                             | [[]byte](../../.md)                                   | :heavy_check_mark:                                    | The request object to use for the request.            |
 
 
 ### Response
 
-**[*operations.PostValidate11Response](../../models/operations/postvalidate11response.md), error**
-
+**[*operations.PostValidate11Response](../../pkg/models/operations/postvalidate11response.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
 
 ## PostValidate2
 
@@ -172,10 +178,12 @@ func main() {
 | Parameter                                             | Type                                                  | Required                                              | Description                                           |
 | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 | `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
-| `request`                                             | [[]byte](../../models//.md)                           | :heavy_check_mark:                                    | The request object to use for the request.            |
+| `request`                                             | [[]byte](../../.md)                                   | :heavy_check_mark:                                    | The request object to use for the request.            |
 
 
 ### Response
 
-**[*operations.PostValidate2Response](../../models/operations/postvalidate2response.md), error**
-
+**[*operations.PostValidate2Response](../../pkg/models/operations/postvalidate2response.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
