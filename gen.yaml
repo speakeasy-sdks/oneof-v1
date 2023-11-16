@@ -2,19 +2,21 @@ configVersion: 1.0.0
 management:
   docChecksum: b9c29f08a320ea8fb11a0da5a402864f
   docVersion: 0.0.0
-  speakeasyVersion: 1.116.0
-  generationVersion: 2.185.0
+  speakeasyVersion: 1.120.3
+  generationVersion: 2.192.1
 generation:
   comments: {}
   sdkClassName: oneOf
   repoURL: https://github.com/speakeasy-sdks/oneof-v1.git
+  usageSnippets:
+    optionalPropertyRendering: withExample
 features:
   go:
-    core: 3.1.2
+    core: 3.1.5
     globalServerURLs: 2.82.0
     unions: 2.85.0
 go:
-  version: 0.6.1
+  version: 0.6.2
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
   imports:

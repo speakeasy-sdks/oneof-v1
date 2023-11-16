@@ -20,9 +20,9 @@ This endpoint returns a 'CatsOrADogOrWolves' model as xml.
 package main
 
 import(
+	oneofv1 "github.com/speakeasy-sdks/oneof-v1"
 	"context"
 	"log"
-	oneofv1 "github.com/speakeasy-sdks/oneof-v1"
 )
 
 func main() {
@@ -64,9 +64,9 @@ This endpoint returns a 'CatsOrADogOrWolves' model as xml.
 package main
 
 import(
+	oneofv1 "github.com/speakeasy-sdks/oneof-v1"
 	"context"
 	"log"
-	oneofv1 "github.com/speakeasy-sdks/oneof-v1"
 )
 
 func main() {
@@ -108,9 +108,9 @@ This endpoint returns a 'CatsOrADogOrWolves' model as xml.
 package main
 
 import(
+	oneofv1 "github.com/speakeasy-sdks/oneof-v1"
 	"context"
 	"log"
-	oneofv1 "github.com/speakeasy-sdks/oneof-v1"
 )
 
 func main() {
@@ -152,10 +152,9 @@ This endpoint expects a 'CatsOrADogOrWolves' model as xml.
 package main
 
 import(
+	oneofv1 "github.com/speakeasy-sdks/oneof-v1"
 	"context"
 	"log"
-	oneofv1 "github.com/speakeasy-sdks/oneof-v1"
-	"github.com/speakeasy-sdks/oneof-v1/pkg/models/shared"
 )
 
 func main() {
@@ -198,10 +197,9 @@ This endpoint expects a 'CatsOrADogOrWolves' model as xml.
 package main
 
 import(
+	oneofv1 "github.com/speakeasy-sdks/oneof-v1"
 	"context"
 	"log"
-	oneofv1 "github.com/speakeasy-sdks/oneof-v1"
-	"github.com/speakeasy-sdks/oneof-v1/pkg/models/shared"
 )
 
 func main() {
@@ -244,10 +242,9 @@ This endpoint expects a 'CatsOrADogOrWolves' model as xml.
 package main
 
 import(
+	oneofv1 "github.com/speakeasy-sdks/oneof-v1"
 	"context"
 	"log"
-	oneofv1 "github.com/speakeasy-sdks/oneof-v1"
-	"github.com/speakeasy-sdks/oneof-v1/pkg/models/shared"
 )
 
 func main() {
