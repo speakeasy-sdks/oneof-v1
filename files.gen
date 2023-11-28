@@ -52,7 +52,6 @@ pkg/utils/utils.go
 /pkg/models/shared/wolf.go
 /pkg/models/shared/catsordogs.go
 /pkg/models/shared/catordog.go
-USAGE.md
 docs/pkg/models/operations/getgenerate13response.md
 docs/pkg/models/operations/getgenerate4response.md
 docs/pkg/models/operations/postvalidate13response.md
@@ -91,4 +90,5 @@ docs/sdks/simplexmlmodel/README.md
 docs/sdks/oneofarrayorsinglexmlmodelwithoptionalwrappingelement/README.md
 docs/sdks/oneofarrayxmlmodel/README.md
 docs/sdks/oneofxmlmodel/README.md
+USAGE.md
 .gitattributes
