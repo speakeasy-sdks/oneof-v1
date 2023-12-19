@@ -50,7 +50,7 @@ func main() {
 **[*operations.GenerateResponse](../../pkg/models/operations/generateresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## Generate1
 
@@ -94,7 +94,7 @@ func main() {
 **[*operations.Generate1Response](../../pkg/models/operations/generate1response.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## Validate
 
@@ -139,7 +139,7 @@ func main() {
 **[*operations.ValidateResponse](../../pkg/models/operations/validateresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## Validate1
 
@@ -184,4 +184,4 @@ func main() {
 **[*operations.Validate1Response](../../pkg/models/operations/validate1response.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |

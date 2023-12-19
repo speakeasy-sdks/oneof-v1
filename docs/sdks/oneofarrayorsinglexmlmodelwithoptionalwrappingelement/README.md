@@ -52,7 +52,7 @@ func main() {
 **[*operations.Generate2Response](../../pkg/models/operations/generate2response.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## GetGenerate12
 
@@ -96,7 +96,7 @@ func main() {
 **[*operations.GetGenerate12Response](../../pkg/models/operations/getgenerate12response.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## GetGenerate3
 
@@ -140,7 +140,7 @@ func main() {
 **[*operations.GetGenerate3Response](../../pkg/models/operations/getgenerate3response.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## PostValidate12
 
@@ -185,7 +185,7 @@ func main() {
 **[*operations.PostValidate12Response](../../pkg/models/operations/postvalidate12response.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## PostValidate3
 
@@ -230,7 +230,7 @@ func main() {
 **[*operations.PostValidate3Response](../../pkg/models/operations/postvalidate3response.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## Validate2
 
@@ -275,4 +275,4 @@ func main() {
 **[*operations.Validate2Response](../../pkg/models/operations/validate2response.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |

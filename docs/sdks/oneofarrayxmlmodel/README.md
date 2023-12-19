@@ -50,7 +50,7 @@ func main() {
 **[*operations.GetGenerate11Response](../../pkg/models/operations/getgenerate11response.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## GetGenerate2
 
@@ -94,7 +94,7 @@ func main() {
 **[*operations.GetGenerate2Response](../../pkg/models/operations/getgenerate2response.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## PostValidate11
 
@@ -139,7 +139,7 @@ func main() {
 **[*operations.PostValidate11Response](../../pkg/models/operations/postvalidate11response.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## PostValidate2
 
@@ -184,4 +184,4 @@ func main() {
 **[*operations.PostValidate2Response](../../pkg/models/operations/postvalidate2response.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
