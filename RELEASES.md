@@ -129,3 +129,13 @@ Based on:
 - [go v0.7.1] .
 ### Releases
 - [Go v0.7.1] https://github.com/speakeasy-sdks/oneof-v1/releases/tag/v0.7.1 - .
+
+## 2024-01-05 00:39:13
+### Changes
+Based on:
+- OpenAPI Doc 0.0.0 
+- Speakeasy CLI 1.130.1 (2.225.2) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [go v0.7.1] .
+### Releases
+- [Go v0.7.1] https://github.com/speakeasy-sdks/oneof-v1/releases/tag/v0.7.1 - .
