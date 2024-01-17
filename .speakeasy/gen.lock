@@ -4,16 +4,16 @@ management:
   docChecksum: b9c29f08a320ea8fb11a0da5a402864f
   docVersion: 0.0.0
   speakeasyVersion: internal
-  generationVersion: 2.225.2
-  releaseVersion: 0.7.1
-  configChecksum: 042b85ef99f16530752c914cc5805b29
+  generationVersion: 2.234.3
+  releaseVersion: 0.7.2
+  configChecksum: 31fc75826b996ba982c2d850d096bd96
   repoURL: https://github.com/speakeasy-sdks/oneof-v1.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/oneof-v1
   published: true
 features:
   go:
-    core: 3.3.0
+    core: 3.3.1
     globalServerURLs: 2.82.1
     unions: 2.85.2
 generatedFiles:
