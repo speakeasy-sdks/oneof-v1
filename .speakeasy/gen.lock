@@ -5,8 +5,8 @@ management:
   docVersion: 0.0.0
   speakeasyVersion: internal
   generationVersion: 2.237.2
-  releaseVersion: 0.7.2
-  configChecksum: 31fc75826b996ba982c2d850d096bd96
+  releaseVersion: 0.7.3
+  configChecksum: fc7d5e475ae544496b98691f1daa53a6
   repoURL: https://github.com/speakeasy-sdks/oneof-v1.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/oneof-v1
