@@ -4,18 +4,18 @@ management:
   docChecksum: b9c29f08a320ea8fb11a0da5a402864f
   docVersion: 0.0.0
   speakeasyVersion: internal
-  generationVersion: 2.250.2
-  releaseVersion: 0.8.0
-  configChecksum: bf230e878976c8cd1d9664479d2c1aaa
+  generationVersion: 2.258.2
+  releaseVersion: 0.9.0
+  configChecksum: 7cfb5464a1ca029b3ab6efca1813ce4d
   repoURL: https://github.com/speakeasy-sdks/oneof-v1.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/oneof-v1
   published: true
 features:
   go:
-    core: 3.3.2
+    core: 3.4.0
     globalServerURLs: 2.82.1
-    unions: 2.85.2
+    unions: 2.85.3
 generatedFiles:
   - arrayofmodelwithoneofmodelsinside.go
   - simplexmlmodel.go
@@ -110,3 +110,4 @@ generatedFiles:
   - docs/sdks/oneofxmlmodel/README.md
   - USAGE.md
   - .gitattributes
+  - internal/hooks/hooks.go
