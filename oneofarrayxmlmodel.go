@@ -43,12 +43,12 @@ func (s *OneofArrayXMLModel) GetGenerate11(ctx context.Context) (*operations.Get
 	req.Header.Set("Accept", "application/xml")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -71,7 +71,6 @@ func (s *OneofArrayXMLModel) GetGenerate11(ctx context.Context) (*operations.Get
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.GetGenerate11Response{
@@ -122,12 +121,12 @@ func (s *OneofArrayXMLModel) GetGenerate2(ctx context.Context) (*operations.GetG
 	req.Header.Set("Accept", "application/xml")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -150,7 +149,6 @@ func (s *OneofArrayXMLModel) GetGenerate2(ctx context.Context) (*operations.GetG
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.GetGenerate2Response{
@@ -207,12 +205,12 @@ func (s *OneofArrayXMLModel) PostValidate11(ctx context.Context, request []byte)
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -235,7 +233,6 @@ func (s *OneofArrayXMLModel) PostValidate11(ctx context.Context, request []byte)
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.PostValidate11Response{
@@ -293,12 +290,12 @@ func (s *OneofArrayXMLModel) PostValidate2(ctx context.Context, request []byte) 
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -321,7 +318,6 @@ func (s *OneofArrayXMLModel) PostValidate2(ctx context.Context, request []byte) 
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.PostValidate2Response{

@@ -123,9 +123,9 @@ func New(opts ...SDKOption) *OneOf {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "0.0.0",
-			SDKVersion:        "0.9.0",
-			GenVersion:        "2.258.2",
-			UserAgent:         "speakeasy-sdk/go 0.9.0 2.258.2 0.0.0 github.com/speakeasy-sdks/oneof-v1",
+			SDKVersion:        "0.9.1",
+			GenVersion:        "2.263.3",
+			UserAgent:         "speakeasy-sdk/go 0.9.1 2.263.3 0.0.0 github.com/speakeasy-sdks/oneof-v1",
 			Hooks:             hooks.New(),
 		},
 	}
