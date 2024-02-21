@@ -43,12 +43,12 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) Generate2(ctx co
 	req.Header.Set("Accept", "application/xml")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -71,7 +71,6 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) Generate2(ctx co
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.Generate2Response{
@@ -122,12 +121,12 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) GetGenerate12(ct
 	req.Header.Set("Accept", "application/xml")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -150,7 +149,6 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) GetGenerate12(ct
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.GetGenerate12Response{
@@ -201,12 +199,12 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) GetGenerate3(ctx
 	req.Header.Set("Accept", "application/xml")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -229,7 +227,6 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) GetGenerate3(ctx
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.GetGenerate3Response{
@@ -286,12 +283,12 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) PostValidate12(c
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -314,7 +311,6 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) PostValidate12(c
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.PostValidate12Response{
@@ -372,12 +368,12 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) PostValidate3(ct
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -400,7 +396,6 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) PostValidate3(ct
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.PostValidate3Response{
@@ -458,12 +453,12 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) Validate2(ctx co
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -486,7 +481,6 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) Validate2(ctx co
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.Validate2Response{
