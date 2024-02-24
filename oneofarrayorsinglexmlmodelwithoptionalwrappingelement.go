@@ -28,7 +28,11 @@ func newOneofArrayOrSingleXMLModelWithOptionalWrappingElement(sdkConfig sdkConfi
 // Generate2
 // This endpoint returns a 'CatsOrADogOrWolves' model as xml.
 func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) Generate2(ctx context.Context) (*operations.Generate2Response, error) {
-	hookCtx := hooks.HookContext{OperationID: "Generate2"}
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "Generate2",
+		SecuritySource: nil,
+	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	opURL, err := url.JoinPath(baseURL, "/oneof/catsoradogorwolves/wolfwrapped")
@@ -43,12 +47,12 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) Generate2(ctx co
 	req.Header.Set("Accept", "application/xml")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
+	client := s.sdkConfiguration.DefaultClient
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
-
-	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -58,15 +62,15 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) Generate2(ctx co
 			err = fmt.Errorf("error sending request: no response")
 		}
 
-		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, nil, err)
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
 		return nil, err
 	} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, httpRes, nil)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
 		if err != nil {
 			return nil, err
 		}
 	} else {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{hookCtx}, httpRes)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
 		if err != nil {
 			return nil, err
 		}
@@ -106,7 +110,11 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) Generate2(ctx co
 // GetGenerate12 - Generate1
 // This endpoint returns a 'CatsOrADogOrWolves' model as xml.
 func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) GetGenerate12(ctx context.Context) (*operations.GetGenerate12Response, error) {
-	hookCtx := hooks.HookContext{OperationID: "GetGenerate12"}
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "GetGenerate12",
+		SecuritySource: nil,
+	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	opURL, err := url.JoinPath(baseURL, "/oneof/catsoradogorwolves/dog")
@@ -121,12 +129,12 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) GetGenerate12(ct
 	req.Header.Set("Accept", "application/xml")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
+	client := s.sdkConfiguration.DefaultClient
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
-
-	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -136,15 +144,15 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) GetGenerate12(ct
 			err = fmt.Errorf("error sending request: no response")
 		}
 
-		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, nil, err)
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
 		return nil, err
 	} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, httpRes, nil)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
 		if err != nil {
 			return nil, err
 		}
 	} else {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{hookCtx}, httpRes)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
 		if err != nil {
 			return nil, err
 		}
@@ -184,7 +192,11 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) GetGenerate12(ct
 // GetGenerate3 - Generate
 // This endpoint returns a 'CatsOrADogOrWolves' model as xml.
 func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) GetGenerate3(ctx context.Context) (*operations.GetGenerate3Response, error) {
-	hookCtx := hooks.HookContext{OperationID: "GetGenerate3"}
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "GetGenerate3",
+		SecuritySource: nil,
+	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	opURL, err := url.JoinPath(baseURL, "/oneof/catsoradogorwolves/arraycats")
@@ -199,12 +211,12 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) GetGenerate3(ctx
 	req.Header.Set("Accept", "application/xml")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
+	client := s.sdkConfiguration.DefaultClient
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
-
-	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -214,15 +226,15 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) GetGenerate3(ctx
 			err = fmt.Errorf("error sending request: no response")
 		}
 
-		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, nil, err)
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
 		return nil, err
 	} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, httpRes, nil)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
 		if err != nil {
 			return nil, err
 		}
 	} else {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{hookCtx}, httpRes)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
 		if err != nil {
 			return nil, err
 		}
@@ -262,7 +274,11 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) GetGenerate3(ctx
 // PostValidate12 - Validate1
 // This endpoint expects a 'CatsOrADogOrWolves' model as xml.
 func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) PostValidate12(ctx context.Context, request []byte) (*operations.PostValidate12Response, error) {
-	hookCtx := hooks.HookContext{OperationID: "PostValidate12"}
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "PostValidate12",
+		SecuritySource: nil,
+	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	opURL, err := url.JoinPath(baseURL, "/oneof/catoradogorwolves/dog")
@@ -283,12 +299,12 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) PostValidate12(c
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
+	client := s.sdkConfiguration.DefaultClient
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
-
-	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -298,15 +314,15 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) PostValidate12(c
 			err = fmt.Errorf("error sending request: no response")
 		}
 
-		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, nil, err)
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
 		return nil, err
 	} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, httpRes, nil)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
 		if err != nil {
 			return nil, err
 		}
 	} else {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{hookCtx}, httpRes)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
 		if err != nil {
 			return nil, err
 		}
@@ -347,7 +363,11 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) PostValidate12(c
 // PostValidate3 - Validate
 // This endpoint expects a 'CatsOrADogOrWolves' model as xml.
 func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) PostValidate3(ctx context.Context, request []byte) (*operations.PostValidate3Response, error) {
-	hookCtx := hooks.HookContext{OperationID: "PostValidate3"}
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "PostValidate3",
+		SecuritySource: nil,
+	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	opURL, err := url.JoinPath(baseURL, "/oneof/catsoradogorwolves/arraycats")
@@ -368,12 +388,12 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) PostValidate3(ct
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
+	client := s.sdkConfiguration.DefaultClient
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
-
-	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -383,15 +403,15 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) PostValidate3(ct
 			err = fmt.Errorf("error sending request: no response")
 		}
 
-		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, nil, err)
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
 		return nil, err
 	} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, httpRes, nil)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
 		if err != nil {
 			return nil, err
 		}
 	} else {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{hookCtx}, httpRes)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
 		if err != nil {
 			return nil, err
 		}
@@ -432,7 +452,11 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) PostValidate3(ct
 // Validate2
 // This endpoint expects a 'CatsOrADogOrWolves' model as xml.
 func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) Validate2(ctx context.Context, request []byte) (*operations.Validate2Response, error) {
-	hookCtx := hooks.HookContext{OperationID: "Validate2"}
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "Validate2",
+		SecuritySource: nil,
+	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	opURL, err := url.JoinPath(baseURL, "/oneof/catsoradogorwolves/wolfwrapped")
@@ -453,12 +477,12 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) Validate2(ctx co
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
+	client := s.sdkConfiguration.DefaultClient
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
-
-	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -468,15 +492,15 @@ func (s *OneofArrayOrSingleXMLModelWithOptionalWrappingElement) Validate2(ctx co
 			err = fmt.Errorf("error sending request: no response")
 		}
 
-		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, nil, err)
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
 		return nil, err
 	} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, httpRes, nil)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
 		if err != nil {
 			return nil, err
 		}
 	} else {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{hookCtx}, httpRes)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
 		if err != nil {
 			return nil, err
 		}
